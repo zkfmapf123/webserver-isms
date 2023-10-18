@@ -92,6 +92,13 @@ resource "aws_security_group" "linux-sg" {
     cidr_blocks = [local.public_ip]
   }
 
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = [local.public_ip]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -127,7 +134,7 @@ module "linux" {
   }]
 
   tags = {
-    Name     = "linux-container-${each.key}"
+    Name     = each.key == "t3.small" ? "nginx" : "apache"
     Resource = "ec2"
   }
 }

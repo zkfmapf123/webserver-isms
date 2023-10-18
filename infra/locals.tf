@@ -17,6 +17,6 @@ locals {
   // Architecture => ARM(64)
   ec2_machine = {
     "t3.small" : "ami-09318275b68e42715",
-    "t3.small" : "ami-09318275b68e42715"
+    "t3.medium" : "ami-09318275b68e42715"
   }
 }
