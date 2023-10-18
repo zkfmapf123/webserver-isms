@@ -15,6 +15,9 @@
 sudo yum update
 sudo amazon-linux-extras install nginx1
 sudo systemctl restart nginx
+
+## conf 위치
+cd /etc/nginx/nginc.conf
 ```
 
 > Directory Indexing
@@ -58,3 +61,25 @@ server {
 ![nginx](./public/nginx.png)
 
 ## Apache
+
+> Apache 설치
+
+```sh
+sudo yum update
+sudo yum install httpd
+
+## conf 위치
+cd /etc/httpd/conf
+```
+
+> Server Tokens
+
+![apahche](./public/apahche.png)
+
+> Directory indexing
+
+![apache-2](./public/aparhce-2.png)
+
+## Apache Referenece
+
+- <a href="https://zetawiki.com/wiki/CentOS_%EC%95%84%ED%8C%8C%EC%B9%98_%EB%B3%B4%EC%95%88%EA%B6%8C%EC%9E%A5%EC%84%A4%EC%A0%95_ServerTokens_Prod,_ServerSignature_Off"> Apahche 권장사항 </a>
