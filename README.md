@@ -28,7 +28,7 @@ cd /etc/nginx/nginc.conf
 
 	    location = / {
     		root /var/datas/download;
-        	autoindex on; //default: off ## 추가
+        	autoindex off; ## 추가
 	    }
     }
 ```
